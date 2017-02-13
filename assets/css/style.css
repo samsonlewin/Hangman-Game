@@ -39,3 +39,7 @@ h1{
     text-align: center;
     padding-bottom: 20px;
 }
+
+/**#name1, #name2, #name3{
+    display: none;
+}

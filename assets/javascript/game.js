@@ -10,11 +10,14 @@ var maxNumberOfGuesses = 12;
 var goodLetters =[];
 var wrongLetters = [];
 
-	// document.getElementById("surprise").style.display = block;
+document.getElementById("name1").style.display = "none";
+document.getElementById('name2').style.display = 'hidden';
+document.getElementById('name3').style.display = 'hidden';
 
 // Chose random world within the names
 var index = Math.floor((Math.random() * 3) + 1);
 var randomWord = names["name"+index];
+displayName();
 
 //if number of guesses>0 or the word is not complete 
 
@@ -64,3 +67,16 @@ var randomWord = names["name"+index];
 
 
 // FUNCTIONS 
+
+function displayName() {
+	if (randomWord === names["name1"]) {
+		document.getElementById('name1').style.display = 'visible';
+	}else if(randomWord === names["name2"]){
+		document.getElementById('name2').style.display = 'visible';
+	}else{
+		document.getElementById('name3').style.display = 'visible';
+	}
+}
+
+
+
