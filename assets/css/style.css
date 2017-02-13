@@ -1,0 +1,41 @@
+body{
+	bottom: 0px;
+    font-family: 'Bahiana', cursive;
+    color: #ffffff;
+}
+
+.background{
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen_background{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+	text-align: center;
+}
+
+h1{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Bahiana', cursive;
+    font-size: 40px;
+}
+
+#game, #counter, #name, #guesses, #letters{
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}

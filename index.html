@@ -3,8 +3,46 @@
 <head>
 	<title>HangMan</title>
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bahiana" rel="stylesheet">
+	
 </head>
 <body>
+<!--video background-->
+	<div class="background">
+		<video preload="auto" autoplay="" loop="" muted="" class="fullscreen_background">
+			<source src="https://player.vimeo.com/external/178812339.hd.mp4?s=bf1db383854643d8d92aac96a5bca01802122d46&amp;profile_id=174" type="video/mp4">
+		</video>
+	</div>
+	<!--video surprise-->
+	<!--<div id="surprise">
+		<video preload="auto" autoplay="" class="fullscreen_background">
+			<source src="assets/images/peur.mov" type="video/mp4">
+		</video>
+	</div> 
+	-->
+	<!--logo-->
+	<div class="logo">
+		<img src="assets/images/hangman-game.png">
+	</div>
+
+
+	<!--game content-->
+	<div id="game">
+
+		<h1>Press any key to get started!</h1>
+		<br>
+
+		<div id="counter"> Wins : <span id="wins">...</span></div>
+
+		<div id="name"><span id="wins">...</span></div>
+
+		<div id="guesses"> Number of guesses remaining : <span id="wins">...</span></div>
+
+		<div id="letters"> Letters already guessed : <span id="wins">...</span></div>
+
+	</div>
 
 </body>
 </html>
