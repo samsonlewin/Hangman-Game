@@ -7,17 +7,14 @@ var names = {
 
 var alreadyTyped = [];
 var maxNumberOfGuesses = 12;
+var wins = 0;
 var goodLetters =[];
 var wrongLetters = [];
-
-document.getElementById("name1").style.display = "none";
-document.getElementById('name2').style.display = 'hidden';
-document.getElementById('name3').style.display = 'hidden';
 
 // Chose random world within the names
 var index = Math.floor((Math.random() * 3) + 1);
 var randomWord = names["name"+index];
-displayName();
+//displayName();
 
 //if number of guesses>0 or the word is not complete 
 
@@ -30,8 +27,9 @@ displayName();
   		if (alreadyTyped.includes(event.key)) {
   			//nothing happens
   		}else{
-  			//if number of guesses>0 or the word is not complete
-  			if (maxNumberOfGuesses > 0) {
+  			//if number of guesses>0 or the word is not complete (meaning if at least one letter from GoodLetters is not in the array RandomWord)
+  			if (maxNumberOfGuesses > 0 || arrayContainsAnotherArray(goodLetters,randomWord)=== false)
+  				{
 	  			// if user imput is inside random word
 	  			if(randomWord.indexOf(event.key) > -1){
 	  				// decrement user guesses
@@ -42,7 +40,7 @@ displayName();
 	  				// store letter in good letters
 	  				goodLetters.push(event.key);
 	  				document.getElementById("").innerHTML = goodLetters;
-	  				// show in HTML in good position
+	  				// show in HTML in good position -- 
 
 	  			}else{
 	  				// decrement user guesses
@@ -55,28 +53,47 @@ displayName();
 	  				// add in HTML on list of wrong letters guessed
 	  				document.getElementById("letters").innerHTML = wrongLetters;
 	  			}
-  		}else{
-
+  		}else if (maxNumberOfGuesses > 0 && arrayContainsAnotherArray(goodLetters,randomWord)=== true){
+  			wins++;
+  			document.getElementById("wins").innerHTML = wins;
   		}
+
+
   	}
-  	}
+  	};
+
 //What do i miss : 
 // - determining when a world is complete and adding a win
 // - creating a loop to change world when complete and 
 //replay game with another world chosen randomly 
 
 
-// FUNCTIONS 
+//////////////////////////////////////////////////////
 
-function displayName() {
-	if (randomWord === names["name1"]) {
-		document.getElementById('name1').style.display = 'visible';
-	}else if(randomWord === names["name2"]){
-		document.getElementById('name2').style.display = 'visible';
-	}else{
-		document.getElementById('name3').style.display = 'visible';
-	}
+word = "cat";
+
+guessed = ["c"];
+
+var displayString = ""
+
+for (var i = name.length - 1; i >= 0; i--) {
+	if (goodLetters.includes(event.key)){
+		document.getElementById("").innerHTML = event.key;
+	}else()
+		document.getElementById("").innerHTML = "_";
+	// else show an "_"
 }
 
+//////////////////////////////////////////////////////
 
+function arrayContainsAnotherArray(a, b){
+  for(var i = 0; i < a.length; i++){
+    if(b.indexOf(a[i]) === -1){
+       return false;
+    }else{
+  	return true;
+  }
+  }
+ };
 
+//////////////////////////////////////////////////////
