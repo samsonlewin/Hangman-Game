@@ -13,13 +13,9 @@ var wins = 0;
 var goodLetters =[];
 var wrongLetters = [];
 
-
-document.getElementById("surprise").style.display = 'none';
-document.getElementById("surprise").muted = true;
-
 // Chose random world within the names
 var index = Math.floor((Math.random() * 3) + 1);
-var randomWord = names["name"+index];
+	var randomWord = names["name"+index];
 
 
 // display dashes to begin
@@ -103,11 +99,16 @@ document.getElementById("name").innerHTML = displayString;
 			// add code here to signify to user that they've won
 		} else if (maxNumberOfGuesses === 0) {
 			console.log("The game has been lost");
-			document.getElementById("surprise").style.display = 'inline';
-			document.getElementById("surprise").muted = false;
+			
+
+
 
 			// add code here to signify to user that they've los
 		}
+
+
+
+
   	};
 
 /////////////////////////////////////////////
