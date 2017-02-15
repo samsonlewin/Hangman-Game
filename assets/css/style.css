@@ -33,12 +33,13 @@ h1{
     font-size: 40px;
 }
 
+
 #game, #counter, #name, #guesses, #letters{
     font-size: 40px;
     display: block;
     text-align: center;
-    padding-bottom: 20px;
-}
+    padding-bottom: 10px;
+
 
 /**#name1, #name2, #name3{
     display: none;
